@@ -7,6 +7,7 @@ class View
 		puts '3 - Delete a task'
 		puts '4 - Complete a task'
 		puts '5 - Uncomplete a task'
+		puts '666 - Delete all Tasks'
 		puts '0 - EXIT'
 		puts '-'*20
 		puts
@@ -38,7 +39,7 @@ class View
 		print 'Choose the ID of the Task you want to complete: '
 		gets.to_i
 	end
-	
+
 	def uncomplete_task
 		print 'Choose the ID of the Task you want to uncomplete: '
 		gets.to_i

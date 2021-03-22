@@ -25,13 +25,20 @@ class ToDo
 			when 5
 				uncomplete_task_id = @view.uncomplete_task
 				@list.uncomplete_task(uncomplete_task_id)
+			when 666
+				@list.delete_all_tasks
 			when 0
 				puts 'Thanks, please come back later :)'
 				exit
 			else 
 				puts 'Not a valid option :('
 		end
-				
+		print '.'
+		sleep(0.5)
+		print '.'
+		sleep(0.5)
+		print '.'
+		sleep(0.5)
 		engine(@view.home_menu)
 	end
 

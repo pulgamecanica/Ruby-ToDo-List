@@ -52,7 +52,7 @@ class Tasks_List
 	end
 
 	def complete_task id
-		if (id > tasks.length)
+		if (id >= tasks.length)
 				puts 'That Task does not exists'
 		else
 			puts "Marked task[#{id}] - #{tasks[id].description} as completed!"  
@@ -62,13 +62,17 @@ class Tasks_List
 	end
 
 	def uncomplete_task id
-		if (id > tasks.length)
+		if (id >= tasks.length)
 				puts 'That Task does not exists'
 		else
 			puts "Marked task[#{id}] - #{tasks[id].description} as uncompleted!"  
 			tasks[id].status = false		
 			save_csv_file
 		end
+	end
+
+	def delete_all_tasks
+		@tasks.clear
 	end
 
 end
